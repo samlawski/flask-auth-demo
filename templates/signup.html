@@ -1,0 +1,45 @@
+{% extends '_base.html' %}
+
+{% block head %}
+  <title>Signup</title>
+{% endblock %}
+
+{% block body %}
+  <header>
+    <h1>Signup</h1>
+  </header>
+
+  <main>
+    <form action="/signup" method="POST">
+      <div>
+        <label for="signup_email">Email: </label>
+        <input type="email" name="email" id="signup_email" placeholder="Email" required>
+      </div>
+      
+      <div>
+        <label for="signup_password">Password: </label>
+        <input type="password" name="password" id="signup_password" placeholder="Password" required>
+      </div>
+
+      <div>
+        <label for="signup_password_confirmation">Confirm Password: </label>
+        <input type="password" name="password_confirmation" id="signup_password_confirmation" placeholder="Confirm Password" required>
+      </div>
+
+      <div>
+        <input type="checkbox" name="is_admin" id="signup_is_admin" value="remember" />
+        <label for="signup_is_admin">Signup as admin</label>
+      </div>
+      
+      <input type="submit" value="Signup">
+    </form>
+  
+    {% if error %}
+      <p class="error">{{error}}</p>
+    {% endif %}
+  </main>
+
+  <footer>
+    <a href="/signin">Already got an account?</a>
+  </footer>
+{% endblock %}

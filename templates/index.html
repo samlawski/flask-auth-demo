@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block head %}
+  <title>Home</title>
+{% endblock %}
+
+{% block body %}
+  <header>
+    <h1>Welcome 👋!</h1>
+  </header>
+
+  <main>
+    <p>You made it! You can see this page!</p>
+    <p>You are logged in as <strong>{{ email }}</strong></p>
+    <p>If you are allowed you could try to go to <a href="/admin">the admin page</a>.</p>
+  </main>
+{% endblock %}
