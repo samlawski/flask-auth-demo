@@ -15,7 +15,9 @@ The project is meant to demonstrate very basic authentication and authorization 
 
 ### 🖥 Setting up the project environment
 
-First, make sure to have Python 3 installed. Then setup and activate your virtual environment: 
+First, make sure to have Python 3 installed. **Mac** should come with it preinstalled. If not, you should use something like [Homebrew](https://brew.sh/) to install the latest version. On **Windows 10**, you can install the latest version of Python simply from the Microsoft Store app. For Linux, follow [the instructions here](https://docs.python-guide.org/starting/install3/linux/).
+
+Then setup and activate your virtual environment: 
 
 #### Linux & Mac
 
@@ -76,3 +78,9 @@ python3 app.py
 ```sh
 python app.py
 ```
+
+### 🌏 Deployment
+
+This application is not meant to run in production but only meant to demonstrate the use of authentication in flask. 
+
+In fact, it's not even possible to delpoy this application to e.g. Google App Engine. For that, `app.py` should be renamed to `main.py`, SQlite should be replaced with an actual database, and secrets should be stored in environment variables.
