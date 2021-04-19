@@ -2,3 +2,8 @@
 __pycache__
 env
 database.db
+
+Lib
+Scripts
+Include
+pyvenv.cfg

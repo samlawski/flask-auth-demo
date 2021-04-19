@@ -17,19 +17,36 @@ The project is meant to demonstrate very basic authentication and authorization 
 
 First, make sure to have Python 3 installed. Then setup and activate your virtual environment: 
 
+#### Linux & Mac
+
 * Install a virtual environment to install Python packages only in your project's environment: `pip3 install virtualenv`
 * Create an environemnt folder: `virtualenv env`
 * Activate the environment: `source env/bin/activate`
 
 Before you work on your project, make sure that it says `(env)` in your Terminal. This way you know, that you're currently working within the environment you just set up.
 
+#### Windows 10
+
+* Install a virtual environment to install Python packages only in your project's environment: `pip3 install virtualenv`
+* Create an environemnt folder: `python -m virtualenv .`
+* (Optional) Most likely, Windows won't allow you to execute the environment script. So probably you have to run the following line to temporarily grant that permission: `Set-ExecutionPolicy Unrestricted -Scope Proces`
+* Now acticate the environment: `.\Script\activate`
+
+Your Command Prompt should now show the name of your project in parentheses. Example: `(flask-auth-demo)`. This is how you know, the environment is active.
+
 ### 📦 Installing all relevant packages
 
 Now, let's install all packages that we need: 
 
 ```sh
-pip3 install flask flask-sqlalchemy flask_login
+pip3 install -r requirements.txt
 ```
+
+This will install the main three packages we need:
+
+* `flask`
+* `flask-sqlalchemy`
+* `flask_login`
 
 _(Check the requirements.txt file to view the versions of the packages used for this demo.)_
 
@@ -39,7 +56,7 @@ As long as we have set up our environment before, all packages will be installed
 
 In order to set up a database, we have to do the following steps:
 
-1. Open the python console: `python3`
+1. Open the python console: `python3` (or just `python` on Windows)
 2. Import the database from our project: `from app import db`
 3. Create the database file: `db.create_all()`
 4. Close the console: `exit()`
@@ -48,6 +65,14 @@ In order to set up a database, we have to do the following steps:
 
 Now, that everything is set up you can start the server:
 
+#### Linux & Mac
+
 ```sh
 python3 app.py
+```
+
+#### Windows
+
+```sh
+python app.py
 ```
